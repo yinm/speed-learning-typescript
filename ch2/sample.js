@@ -1,2 +1,2 @@
-var let_x = 1;
-var let_x = 10;
+var DATA = 100;
+DATA = 108;

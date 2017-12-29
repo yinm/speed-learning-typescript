@@ -1,2 +1,2 @@
-let let_x: number = 1;
-let let_x: number = 10;
+const DATA: number = 100;
+DATA = 108;
