@@ -1,5 +1,7 @@
-let mail: string = 'admin@example.com';
-let msg = `レビュアー募集中！
-書籍のご感想を是非お聞かせください。
-弊社サポートサイト、SNSなどで紹介させていただきます。(送付先:${mail})`;
-console.log(msg);
+function show(result: string) {
+    return `結果は${result}です。`;
+}
+
+// console.log(show(100));
+console.log(show(<any>100));
+console.log(show('100' as any));
