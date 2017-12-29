@@ -1,4 +1,4 @@
-let data: [string, number, boolean] = ['hoge', 10.355, false];
-
-data.shift();
-console.log(data[0].substring((2)));
+let data: string | boolean;
+data = 'hoge';
+data = false;
+data = 1;
