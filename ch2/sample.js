@@ -1,7 +1,4 @@
-var Sex;
-(function (Sex) {
-    Sex[Sex["MALE"] = 1] = "MALE";
-    Sex[Sex["FEMALE"] = 2] = "FEMALE";
-    Sex[Sex["UNKNOWN"] = 4] = "UNKNOWN";
-})(Sex || (Sex = {}));
-console.log(Sex[4]);
+var data = ['hoge', 10.355, false];
+console.log(data[0].substring(2));
+console.log(data[1].toFixed(1));
+console.log(data[2] === false);
