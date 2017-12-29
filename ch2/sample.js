@@ -1,4 +1,2 @@
-if (true) {
-    var i = 1;
-}
-console.log(i);
+var let_x = 1;
+var let_x = 10;

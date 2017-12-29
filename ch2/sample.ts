@@ -1,5 +1,2 @@
-if (true) {
-    let i: number = 1;
-}
-
-console.log(i);
+let let_x: number = 1;
+let let_x: number = 10;
