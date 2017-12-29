@@ -1,9 +1,10 @@
-function square(value) {
-    if (value < 0) {
-        return false;
+function show(value) {
+    if (typeof value === 'number') {
+        console.log(value.toFixed(0));
     }
     else {
-        return Math.sqrt(value);
+        console.log(value ? '真' : '偽');
     }
 }
-console.log(square(9));
+show(10.358);
+show(false);
