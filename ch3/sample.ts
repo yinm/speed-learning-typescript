@@ -1,11 +1,14 @@
-function sum(...values: number[]) {
-  let result = 0;
+function show(value: number): void;
+function show(value: boolean): void;
 
-  for (let value of values) {
-    result += value;
+function show(value: any): void {
+  if (typeof value === 'number') {
+    console.log(value.toFixed(0));
+  } else {
+    console.log(value ? '真' : '偽');
   }
-
-  return result;
 }
 
-console.log(sum(1, 5, -8, 10));
+show(10.358);
+show(false);
+// show('ほげ');
