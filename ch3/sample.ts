@@ -1,10 +1,9 @@
-let Counter = function() {
-  this.count = 0;
+function showTime(time?: Date): string {
+  if (time === undefined) {
+    return '現在時刻:' + (new Date()).toLocaleString();
+  } else {
+    return '現在時刻:' + time.toLocaleString();
+  }
+}
 
-  setInterval(() => {
-    console.log(this.count);
-    this.count++;
-  }, 1000)
-};
-
-Counter();
+console.log(showTime());

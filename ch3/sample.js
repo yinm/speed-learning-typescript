@@ -1,9 +1,9 @@
-var Counter = function () {
-    var _this = this;
-    this.count = 0;
-    setInterval(function () {
-        console.log(_this.count);
-        _this.count++;
-    }, 1000);
-};
-Counter();
+function showTime(time) {
+    if (time === undefined) {
+        return '現在時刻:' + (new Date()).toLocaleString();
+    }
+    else {
+        return '現在時刻:' + time.toLocaleString();
+    }
+}
+console.log(showTime());
