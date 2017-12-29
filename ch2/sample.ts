@@ -1,8 +1,12 @@
-let obj: { [index: string]: string; } = {
+interface StringMap {
+  [index: string]: string;
+}
+
+let obj: StringMap = {
   'hoge': 'ほげ',
   'foo': 'ふぅ',
   'bar': 'ばぁ',
 };
 
-console.log(obj.hoge);
-console.log(obj['hoge']);
+obj.piyo = 'ぴよ';
+console.log(obj);
