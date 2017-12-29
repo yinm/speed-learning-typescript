@@ -1,1 +1,2 @@
-var data = ['abc', 'xyz', true];
+var hoge = 100;
+console.log(hoge);

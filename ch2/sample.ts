@@ -1,2 +1,3 @@
-type FooType = [ string, number, boolean ];
-let data: FooType = ['abc', 'xyz', true];
+type HogeType = number | boolean;
+let hoge: HogeType = 100;
+console.log(hoge);
