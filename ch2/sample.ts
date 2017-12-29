@@ -1,4 +1,1 @@
-let data: string | boolean;
-data = 'hoge';
-data = false;
-data = 1;
+let data: (string | number)[] = ['ほげ', 108, 'hoge'];

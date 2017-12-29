@@ -1,4 +1,1 @@
-var data;
-data = 'hoge';
-data = false;
-data = 1;
+var data = ['ほげ', 108, 'hoge'];
