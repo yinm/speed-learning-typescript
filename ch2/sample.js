@@ -1,3 +1,2 @@
-var DATA = [1, 2, 3];
-DATA[0] = 10;
-console.log(DATA);
+var data = ['Java', 'Python', 'PHP', 'Ruby', 'C#'];
+console.log(data[0]);
