@@ -1,12 +1,9 @@
-interface StringMap {
-  [index: string]: string;
+enum Sex {
+  MALE,
+  FEMALE,
+  UNKNOEN
 }
 
-let obj: StringMap = {
-  'hoge': 'ほげ',
-  'foo': 'ふぅ',
-  'bar': 'ばぁ',
-};
-
-obj.piyo = 'ぴよ';
-console.log(obj);
+let m: Sex = Sex.MALE;
+console.log(m);
+console.log(Sex[m]);
