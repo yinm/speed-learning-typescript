@@ -1,11 +1,10 @@
 let Counter = function() {
-  let _this = this;
-  _this.count = 0;
+  this.count = 0;
 
-  setInterval(function() {
-    console.log(_this.count);
-    _this.count++;
-  }, 1000);
+  setInterval(() => {
+    console.log(this.count);
+    this.count++;
+  }, 1000)
 };
 
 Counter();
