@@ -1,3 +1,5 @@
-var data5 = undefined;
-data5 = 150;
-data5 = 'hoge';
+var data;
+data = 10.5;
+console.log(data.toFixed(0));
+data = 'hoge';
+console.log(data.charAt(0));
