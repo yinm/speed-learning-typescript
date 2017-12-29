@@ -1,5 +1,5 @@
-function toInt(value: number) {
-    return value.toFixed(0);
+if (true) {
+    var i: number = 1;
 }
 
-console.log(toInt(<any>'hoge'));
+console.log(i);
