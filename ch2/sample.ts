@@ -1,9 +1,7 @@
 enum Sex {
-  MALE,
-  FEMALE,
-  UNKNOEN
+  MALE = 1,
+  FEMALE = 2,
+  UNKNOWN = 4,
 }
 
-let m: Sex = Sex.MALE;
-console.log(m);
-console.log(Sex[m]);
+console.log(Sex[4]);

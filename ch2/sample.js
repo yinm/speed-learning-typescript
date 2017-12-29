@@ -1,9 +1,7 @@
 var Sex;
 (function (Sex) {
-    Sex[Sex["MALE"] = 0] = "MALE";
-    Sex[Sex["FEMALE"] = 1] = "FEMALE";
-    Sex[Sex["UNKNOEN"] = 2] = "UNKNOEN";
+    Sex[Sex["MALE"] = 1] = "MALE";
+    Sex[Sex["FEMALE"] = 2] = "FEMALE";
+    Sex[Sex["UNKNOWN"] = 4] = "UNKNOWN";
 })(Sex || (Sex = {}));
-var m = Sex.MALE;
-console.log(m);
-console.log(Sex[m]);
+console.log(Sex[4]);
