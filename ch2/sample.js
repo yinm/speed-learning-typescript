@@ -1,1 +1,1 @@
-var data = ['ほげ', 108, 'hoge'];
+var data = ['abc', 'xyz', true];

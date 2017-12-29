@@ -1,1 +1,2 @@
-let data: (string | number)[] = ['ほげ', 108, 'hoge'];
+type FooType = [ string, number, boolean ];
+let data: FooType = ['abc', 'xyz', true];
