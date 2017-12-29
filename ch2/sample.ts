@@ -1,3 +1,3 @@
-let data4;
-data4 = 150;
-data4 = 'hoge';
+let data5 = undefined;
+data5 = 150;
+data5 = 'hoge';

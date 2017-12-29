@@ -1,3 +1,3 @@
-var data4;
-data4 = 150;
-data4 = 'hoge';
+var data5 = undefined;
+data5 = 150;
+data5 = 'hoge';
