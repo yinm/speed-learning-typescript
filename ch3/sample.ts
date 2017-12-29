@@ -1,3 +1,11 @@
-let triangle = (base: number, height: number): number => base * height / 2;
+let Counter = function() {
+  let _this = this;
+  _this.count = 0;
 
-console.log(triangle(5, 10));
+  setInterval(function() {
+    console.log(_this.count);
+    _this.count++;
+  }, 1000);
+};
+
+Counter();
