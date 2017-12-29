@@ -1,2 +1,4 @@
-var hoge = 100;
-console.log(hoge);
+function getScene(s) {
+}
+getScene('spring');
+getScene('fall');

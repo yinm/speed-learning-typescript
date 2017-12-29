@@ -1,3 +1,7 @@
-type HogeType = number | boolean;
-let hoge: HogeType = 100;
-console.log(hoge);
+type Season = 'spring' | 'summer' | 'autumn' | 'winter';
+
+function getScene(s: Season) {
+}
+
+getScene('spring');
+getScene('fall');
