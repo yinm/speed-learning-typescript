@@ -1,4 +1,2 @@
-function getScene(s) {
-}
-getScene('spring');
-getScene('fall');
+var data1 = undefined;
+var data2 = null;

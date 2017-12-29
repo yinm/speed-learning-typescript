@@ -1,7 +1,2 @@
-type Season = 'spring' | 'summer' | 'autumn' | 'winter';
-
-function getScene(s: Season) {
-}
-
-getScene('spring');
-getScene('fall');
+let data1: string = undefined;
+let data2: string = null;
