@@ -1,1 +1,1 @@
-# speed-learning-typescript
+[速習 TypeScript - WINGS](http://www.wings.msn.to/index.php/-/A-03/WGS-JSF-002/)をやってます。
