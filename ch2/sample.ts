@@ -1,2 +1,8 @@
-let data: number[][] = [[10, 20], [30, 40], [50, 60]];
-console.log(data[1][1]);
+let obj: { [index: string]: string; } = {
+  'hoge': 'ほげ',
+  'foo': 'ふぅ',
+  'bar': 'ばぁ',
+};
+
+console.log(obj.hoge);
+console.log(obj['hoge']);
