@@ -1,3 +1,3 @@
-var data3 = 100;
-data3 = 150;
-data3 = 'hoge';
+var data4;
+data4 = 150;
+data4 = 'hoge';
