@@ -1,6 +1,4 @@
-function show(result) {
-    return "\u7D50\u679C\u306F" + result + "\u3067\u3059\u3002";
+function toInt(value) {
+    return value.toFixed(0);
 }
-// console.log(show(100));
-console.log(show(100));
-console.log(show('100'));
+console.log(toInt('hoge'));
