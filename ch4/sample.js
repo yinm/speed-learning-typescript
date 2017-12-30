@@ -1,21 +1,11 @@
-var Person = /** @class */ (function () {
-    function Person() {
+var Figure = /** @class */ (function () {
+    function Figure() {
     }
-    Object.defineProperty(Person.prototype, "age", {
-        get: function () {
-            return this._age;
-        },
-        set: function (value) {
-            if (value < 0) {
-                throw new RangeError('ageプロパティは整数で指定してください。');
-            }
-            this._age = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Person;
+    Figure.circle = function (radius) {
+        return radius * radius * this.Pi;
+    };
+    Figure.Pi = 3.14159;
+    return Figure;
 }());
-var p = new Person();
-p.age = 10;
-console.log(p.age);
+console.log(Figure.Pi);
+console.log(Figure.circle(5));
