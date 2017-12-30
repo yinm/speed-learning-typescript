@@ -2,7 +2,7 @@ interface Figure {
   getArea(): number;
 }
 
-class Triangle implements Figure {
+class Triangle {
   constructor(private width: number, protected height: number) {}
 
   getArea(): number {
@@ -10,5 +10,5 @@ class Triangle implements Figure {
   }
 }
 
-let t = new Triangle(10, 5);
+let t: Figure = new Triangle(10, 5);
 console.log(t.getArea());
