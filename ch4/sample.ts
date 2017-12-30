@@ -1,29 +1,16 @@
-class Person {
-  protected name: string;
-  protected sex: string;
+class Figure {
+  constructor(protected width: number, protected height: number) {}
 
-  constructor(name: string, sex: string) {
-    this.name = name;
-    this.sex = sex;
-  }
-
-  show(): string {
-    return `${this.name}は${this.sex}です。`;
+  getArea(): number {
+    return 0;
   }
 }
 
-class BusinessPerson extends Person {
-  protected clazz: string;
-
-  constructor(name: string, sex: string, clazz: string) {
-    super(name, sex);
-    this.clazz = clazz;
-  }
-
-  show(): string {
-    return super.show() + `${this.clazz}です。`;
+class Triangle extends Figure {
+  getArea(): number {
+    return this.width * this.height / 2;
   }
 }
 
-let p = new BusinessPerson('理央', '女', '主任');
-console.log(p.show());
+let t = new Triangle(10, 5);
+console.log(t.getArea());
