@@ -1,12 +1,12 @@
-abstract class Figure {
-  constructor(protected width: number, protected height: number) {}
-
-  abstract getArea(): number;
+interface Figure {
+  getArea(): number;
 }
 
-class Triangle extends Figure {
+class Triangle implements Figure {
+  constructor(private width: number, protected height: number) {}
+
   getArea(): number {
-    return this.width * this.height / 2;
+    return this.width + this.height / 2;
   }
 }
 
