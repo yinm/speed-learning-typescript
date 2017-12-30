@@ -1,14 +1,30 @@
-var MyCollection = /** @class */ (function () {
-    function MyCollection() {
+function merge(obj1, obj2) {
+    var result = {};
+    for (var key in obj1) {
+        result[key] = obj1[key];
     }
-    MyCollection.addAll = function (data) {
-        var values = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            values[_i - 1] = arguments[_i];
-        }
-        return data.concat(values);
+    for (var key in obj2) {
+        result[key] = obj2[key];
+    }
+    return result;
+}
+var Book = /** @class */ (function () {
+    function Book(title, price) {
+        this.title = title;
+        this.price = price;
+    }
+    Book.prototype.toString = function () {
+        return this.title + " " + this.price;
     };
-    return MyCollection;
+    return Book;
 }());
-var x = [10, 15, 30];
-console.log(MyCollection.addAll(x, 35, 50));
+var Logger = /** @class */ (function () {
+    function Logger() {
+    }
+    Logger.prototype.debug = function () {
+        console.log(this.toString());
+    };
+    return Logger;
+}());
+var m = merge(new Book('JavaScript本格入門', 2980), new Logger());
+console.log(m);
