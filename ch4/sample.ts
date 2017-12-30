@@ -13,11 +13,17 @@ class Person {
 }
 
 class BusinessPerson extends Person {
-  work(): string {
-    return `${this.name}はテキパキ働きます。`;
+  protected clazz: string;
+
+  constructor(name: string, sex: string, clazz: string) {
+    super(name, sex);
+    this.clazz = clazz;
+  }
+
+  show(): string {
+    return super.show() + `${this.clazz}です。`;
   }
 }
 
-let p = new BusinessPerson('理央', '女');
+let p = new BusinessPerson('理央', '女', '主任');
 console.log(p.show());
-console.log(p.work());
