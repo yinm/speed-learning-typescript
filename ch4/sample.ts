@@ -1,13 +1,2 @@
-interface Car {
-  type: string;
-  run(): void;
-}
-
-let c: Car = {
-  type: 'トラック',
-  run() {
-    console.log(`${this.type}が走ります。`);
-  }
-};
-
-c.run();
+let c1: { type: string, weight: number } = { type: '軽トラック', weight: 750 };
+let c2: { type: string; weight: number } = { type: '軽トラック', weight: 750 };
