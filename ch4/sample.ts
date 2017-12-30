@@ -1,8 +1,23 @@
-namespace Wings.MainApp {
-  export class Hoge {}
-  export function foo() { console.log('foooo'); }
+class Person {
+  protected name: string;
+  protected sex: string;
+
+  constructor(name: string, sex: string) {
+    this.name = name;
+    this.sex = sex;
+  }
+
+  show(): string {
+    return `${this.name}は${this.sex}です。`;
+  }
 }
 
-let h = new Wings.MainApp.Hoge();
-console.log(h);
-Wings.MainApp.foo();
+class BusinessPerson extends Person {
+  work(): string {
+    return `${this.name}はテキパキ働きます。`;
+  }
+}
+
+let p = new BusinessPerson('理央', '女');
+console.log(p.show());
+console.log(p.work());
