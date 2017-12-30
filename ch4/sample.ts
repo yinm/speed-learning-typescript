@@ -1,8 +1,9 @@
-class MyClass {
-  hoge() {}
-  foo() {}
+interface Car2 {
+  (type: string): string;
 }
 
-let x: { hoge(); } = new MyClass();
-x.hoge();
-// x.foo();
+let c2: Car2 = function(type: string): string {
+  return `車種は、${type}`;
+}
+
+console.log(c2('軽自動車'));

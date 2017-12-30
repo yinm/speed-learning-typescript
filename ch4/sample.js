@@ -1,10 +1,4 @@
-var MyClass = /** @class */ (function () {
-    function MyClass() {
-    }
-    MyClass.prototype.hoge = function () { };
-    MyClass.prototype.foo = function () { };
-    return MyClass;
-}());
-var x = new MyClass();
-x.hoge();
-// x.foo(); 
+var c2 = function (type) {
+    return "\u8ECA\u7A2E\u306F\u3001" + type;
+};
+console.log(c2('軽自動車'));
