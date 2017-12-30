@@ -10,4 +10,3 @@ var Person = /** @class */ (function () {
 }());
 var p = new Person('理央', '女');
 console.log(p.show());
-// console.log(p.name);
