@@ -1,11 +1,18 @@
 class Person {
-  constructor(private name: string, private sex: string) {
+  private _age: number;
+
+  get age(): number {
+    return this._age;
   }
 
-  public show(): string {
-    return `${this.name}は${this.sex}です。`;
+  set age(value: number) {
+    if (value < 0) {
+      throw new RangeError('ageプロパティは整数で指定してください。');
+    }
+    this._age = value;
   }
 }
 
-let p = new Person('理央', '女');
-console.log(p.show());
+let p = new Person();
+p.age = 10;
+console.log(p.age);
