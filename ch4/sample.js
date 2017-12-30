@@ -13,9 +13,6 @@ var Figure = /** @class */ (function () {
         this.width = width;
         this.height = height;
     }
-    Figure.prototype.getArea = function () {
-        return 0;
-    };
     return Figure;
 }());
 var Triangle = /** @class */ (function (_super) {
