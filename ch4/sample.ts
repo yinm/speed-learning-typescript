@@ -1,8 +1,8 @@
-namespace MainApp {
-  export class Hoge { name: string; }
-  export function foo() { console.log('foo'); }
+namespace Wings.MainApp {
+  export class Hoge {}
+  export function foo() { console.log('foooo'); }
 }
 
-let h = new MainApp.Hoge();
+let h = new Wings.MainApp.Hoge();
 console.log(h);
-MainApp.foo();
+Wings.MainApp.foo();
