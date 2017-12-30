@@ -1,4 +1,7 @@
-class MyGenerics<T> {
+class Hoge {}
+class FooBar extends Hoge {}
+
+class MyGenerics<T extends Hoge> {
   value: T;
 
   getValue(): T {
@@ -6,6 +9,6 @@ class MyGenerics<T> {
   }
 }
 
-let g = new MyGenerics<string>();
-g.value = 'Hoge';
+let g = new MyGenerics<FooBar>();
+g.value = new FooBar();
 console.log(g.getValue());
