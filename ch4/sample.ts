@@ -1,14 +1,8 @@
-class Hoge {}
-class FooBar extends Hoge {}
-
-class MyGenerics<T extends Hoge> {
-  value: T;
-
-  getValue(): T {
-    return this.value;
+class MyCollection {
+  static addAll<T>(data: T[], ...values: T[]): T[] {
+    return data.concat(values);
   }
 }
 
-let g = new MyGenerics<FooBar>();
-g.value = new FooBar();
-console.log(g.getValue());
+let x = [10, 15, 30];
+console.log(MyCollection.addAll(x, 35, 50));
