@@ -1,2 +1,10 @@
-var c1 = { type: '軽トラック', weight: 750 };
-var c2 = { type: '軽トラック', weight: 750 };
+var MyClass = /** @class */ (function () {
+    function MyClass() {
+    }
+    MyClass.prototype.hoge = function () { };
+    MyClass.prototype.foo = function () { };
+    return MyClass;
+}());
+var x = new MyClass();
+x.hoge();
+// x.foo(); 
