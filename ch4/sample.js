@@ -1,11 +1,14 @@
-var Figure = /** @class */ (function () {
-    function Figure() {
-    }
-    Figure.circle = function (radius) {
-        return radius * radius * this.Pi;
-    };
-    Figure.Pi = 3.14159;
-    return Figure;
-}());
-console.log(Figure.Pi);
-console.log(Figure.circle(5));
+var MainApp;
+(function (MainApp) {
+    var Hoge = /** @class */ (function () {
+        function Hoge() {
+        }
+        return Hoge;
+    }());
+    MainApp.Hoge = Hoge;
+    function foo() { console.log('foo'); }
+    MainApp.foo = foo;
+})(MainApp || (MainApp = {}));
+var h = new MainApp.Hoge();
+console.log(h);
+MainApp.foo();

@@ -1,10 +1,8 @@
-class Figure {
-  public static Pi: number = 3.14159;
-
-  public static circle(radius: number): number {
-    return radius * radius * this.Pi;
-  }
+namespace MainApp {
+  export class Hoge { name: string; }
+  export function foo() { console.log('foo'); }
 }
 
-console.log(Figure.Pi);
-console.log(Figure.circle(5));
+let h = new MainApp.Hoge();
+console.log(h);
+MainApp.foo();
