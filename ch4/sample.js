@@ -1,2 +1,11 @@
-var data = [1, 2, 3];
-var data2 = [1, '10', true];
+var MyGenerics = /** @class */ (function () {
+    function MyGenerics() {
+    }
+    MyGenerics.prototype.getValue = function () {
+        return this.value;
+    };
+    return MyGenerics;
+}());
+var g = new MyGenerics();
+g.value = 'Hoge';
+console.log(g.getValue());
