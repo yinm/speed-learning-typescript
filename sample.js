@@ -1,4 +1,6 @@
-var data;
-data = 'hoge';
-data = false;
-data = 1;
+var data = [
+    'hoge',
+    108,
+    'foo',
+];
+console.log(data);
