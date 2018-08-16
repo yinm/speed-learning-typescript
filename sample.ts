@@ -1,3 +1,5 @@
-$(function() {
-  $('.hoge').css('background-color', 'Red')
-})
+function process(value: string | number) {
+  if (typeof value === 'string') {
+    return value.toUpperCase()
+  }
+}
