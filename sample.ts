@@ -1,5 +1,16 @@
-function process(value: string | number) {
-  if (typeof value === 'string') {
-    return value.toUpperCase()
+class Person {
+  name: string
+  sex: string
+
+  constructor(name, sex) {
+    this.name = name
+    this.sex = sex
+  }
+
+  show() {
+    return `${this.name}は${this.sex}です。`
   }
 }
+
+let p = new Person('理央', '女')
+console.log(p.show())
