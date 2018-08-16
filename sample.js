@@ -1,13 +1,21 @@
 var Person = /** @class */ (function () {
-    function Person(name, sex) {
-        this.name = name;
-        this.sex = sex;
+    function Person() {
     }
-    Person.prototype.show = function () {
-        return this.name + "\u306F" + this.sex + "\u3067\u3059";
-    };
+    Object.defineProperty(Person.prototype, "age", {
+        get: function () {
+            return this._age;
+        },
+        set: function (value) {
+            if (value < 0) {
+                throw new RangeError('ageプロパティは正数で指定してください');
+            }
+            this._age = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Person;
 }());
-var p = new Person('りお', '女');
-console.log(p.show());
-console.log(p.name);
+var p = new Person();
+p.age = 10;
+console.log(p.age);
