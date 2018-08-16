@@ -4,9 +4,10 @@ var Person = /** @class */ (function () {
         this.sex = sex;
     }
     Person.prototype.show = function () {
-        return this.name + "\u306F" + this.sex + "\u3067\u3059\u3002";
+        return this.name + "\u306F" + this.sex + "\u3067\u3059";
     };
     return Person;
 }());
-var p = new Person('理央', '女');
+var p = new Person('りお', '女');
 console.log(p.show());
+console.log(p.name);
