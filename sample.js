@@ -17,20 +17,21 @@ var Person = /** @class */ (function () {
         this.sex = sex;
     }
     Person.prototype.show = function () {
-        return this.name + "\u306F" + this.sex + "\u3067\u3059";
+        return this.name + "\u306F" + this.sex + "\u3067\u3059\u3002";
     };
     return Person;
 }());
 var BusinessPerson = /** @class */ (function (_super) {
     __extends(BusinessPerson, _super);
-    function BusinessPerson() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function BusinessPerson(name, sex, clazz) {
+        var _this = _super.call(this, name, sex) || this;
+        _this.clazz = clazz;
+        return _this;
     }
-    BusinessPerson.prototype.work = function () {
-        return this.name + "\u306F\u30C6\u30AD\u30D1\u30AD\u50CD\u304D\u307E\u3059\u3002";
+    BusinessPerson.prototype.show = function () {
+        return _super.prototype.show.call(this) + (this.clazz + "\u3067\u3059\u3002");
     };
     return BusinessPerson;
 }(Person));
-var p = new BusinessPerson('理央', '女');
+var p = new BusinessPerson('理央', '女', '主任');
 console.log(p.show());
-console.log(p.work());
