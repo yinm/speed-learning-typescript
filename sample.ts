@@ -1,3 +1,3 @@
-let data1: string = 'hoge'
-data1 = 'foo'
-data1 = 100
+let data2 = 100
+data2 = 150
+data2 = 'hoge'
