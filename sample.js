@@ -1,23 +1,13 @@
-var MyClass = /** @class */ (function () {
-    function MyClass(_value) {
-        this._value = _value;
+var MyGenerics = /** @class */ (function () {
+    function MyGenerics() {
     }
-    Object.defineProperty(MyClass.prototype, "value", {
-        get: function () {
-            return this._value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    MyClass.prototype.add = function (value) {
-        this._value += value;
-        return this;
+    // T型の値を返すメソッド
+    MyGenerics.prototype.getValue = function () {
+        return this.value;
     };
-    MyClass.prototype.minus = function (value) {
-        this._value -= value;
-        return this;
-    };
-    return MyClass;
+    return MyGenerics;
 }());
-var clazz = new MyClass(10);
-console.log(clazz.add(10).minus(5).value);
+// MyGenericsクラスにstring型を割り当て
+var g = new MyGenerics();
+g.value = 'hoge';
+console.log(g.getValue());

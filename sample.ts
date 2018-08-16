@@ -1,23 +1,15 @@
-class MyClass {
-  constructor(
-    private _value: number
-  ) {
-  }
+class MyGenerics<T> {
+  // T型のプロパティ
+  value: T
 
-  get value(): number {
-    return this._value
-  }
-
-  add(value: number): this {
-    this._value += value
-    return this
-  }
-
-  minus(value: number): this {
-    this._value -= value
-    return this
+  // T型の値を返すメソッド
+  getValue(): T {
+    return this.value
   }
 }
 
-const clazz = new MyClass(10)
-console.log(clazz.add(10).minus(5).value)
+// MyGenericsクラスにstring型を割り当て
+const g = new MyGenerics<string>()
+
+g.value = 'hoge'
+console.log(g.getValue())
