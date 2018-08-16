@@ -1,14 +1,10 @@
-function show(value: number): void
-function show(value: boolean): void
-
-function show(value: any): void {
-  if (typeof value === 'number') {
-    console.log(value.toFixed(0))
+function square(value: number): number | boolean {
+  if (value < 0) {
+    return false
   } else {
-    console.log(value ? '真' : '偽')
+    return Math.sqrt(value)
   }
 }
 
-show(10.358)
-show(false)
-show('hoge')
+console.log(square(9))
+console.log(square(-9))
