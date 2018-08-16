@@ -1,18 +1,15 @@
-interface Figure {
-  getArea(): number
+// Car型を定義
+interface Car {
+  type: string // プロパティのシグネチャ
+  run(): void // メソッドのシグネチャ
 }
 
-class Triangle {
-  constructor(
-    private width: number,
-    private height: number
-  ) {
-  }
-
-  getArea(): number {
-    return this.width * this.height / 2
+// Car型の変数を宣言 (型注釈としてinterfaceを使う)
+const c: Car = {
+  type: 'トラック',
+  run() {
+    console.log(`${this.type}が走ります。`)
   }
 }
 
-const t: Figure = new Triangle(10, 5)
-console.log(t.getArea())
+c.run()

@@ -1,12 +1,8 @@
-var Triangle = /** @class */ (function () {
-    function Triangle(width, height) {
-        this.width = width;
-        this.height = height;
+// Car型の変数を宣言 (型注釈としてinterfaceを使う)
+var c = {
+    type: 'トラック',
+    run: function () {
+        console.log(this.type + "\u304C\u8D70\u308A\u307E\u3059\u3002");
     }
-    Triangle.prototype.getArea = function () {
-        return this.width * this.height / 2;
-    };
-    return Triangle;
-}());
-var t = new Triangle(10, 5);
-console.log(t.getArea());
+};
+c.run();
