@@ -1,19 +1,9 @@
-class Person {
-  private _age: number
-
-  get age(): number {
-    return this._age
-  }
-
-  set age(value: number) {
-    if (value < 0) {
-      throw new RangeError('ageプロパティは正数で指定してください')
-    }
-
-    this._age = value
+class Figure {
+  public static Pi: number = 3.14159
+  public static circle(radius: number): number {
+    return radius * radius * this.Pi
   }
 }
 
-let p = new Person()
-p.age = 10
-console.log(p.age)
+console.log(Figure.Pi)
+console.log(Figure.circle(5))
