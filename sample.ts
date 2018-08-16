@@ -1,28 +1,20 @@
-class Person {
+class Figure {
   constructor(
-    protected name: string,
-    protected sex: string
-  ){
+    protected width: number,
+    protected height: number
+  ) {
   }
 
-  show(): string {
-    return `${this.name}は${this.sex}です。`
+  getArea(): number {
+    return 0
   }
 }
 
-class BusinessPerson extends Person {
-  constructor(
-    name: string,
-    sex: string,
-    protected clazz: string
-  ){
-    super(name, sex)
-  }
-
-  show(): string {
-    return super.show() + `${this.clazz}です。`
+class Triangle extends Figure {
+  getArea(): number {
+    return this.width * this.height / 2
   }
 }
 
-const p = new BusinessPerson('理央', '女', '主任')
-console.log(p.show())
+const t = new Triangle(10, 5)
+console.log(t.getArea())

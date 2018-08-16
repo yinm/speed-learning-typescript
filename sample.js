@@ -11,27 +11,25 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Person = /** @class */ (function () {
-    function Person(name, sex) {
-        this.name = name;
-        this.sex = sex;
+var Figure = /** @class */ (function () {
+    function Figure(width, height) {
+        this.width = width;
+        this.height = height;
     }
-    Person.prototype.show = function () {
-        return this.name + "\u306F" + this.sex + "\u3067\u3059\u3002";
+    Figure.prototype.getArea = function () {
+        return 0;
     };
-    return Person;
+    return Figure;
 }());
-var BusinessPerson = /** @class */ (function (_super) {
-    __extends(BusinessPerson, _super);
-    function BusinessPerson(name, sex, clazz) {
-        var _this = _super.call(this, name, sex) || this;
-        _this.clazz = clazz;
-        return _this;
+var Triangle = /** @class */ (function (_super) {
+    __extends(Triangle, _super);
+    function Triangle() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    BusinessPerson.prototype.show = function () {
-        return _super.prototype.show.call(this) + (this.clazz + "\u3067\u3059\u3002");
+    Triangle.prototype.getArea = function () {
+        return this.width * this.height / 2;
     };
-    return BusinessPerson;
-}(Person));
-var p = new BusinessPerson('理央', '女', '主任');
-console.log(p.show());
+    return Triangle;
+}(Figure));
+var t = new Triangle(10, 5);
+console.log(t.getArea());
