@@ -1,7 +1,7 @@
-namespace MainApp {
+namespace Wings.MainApp {
   export class Hoge {}
   export function foo() {}
 }
 
-let h = new MainApp.Hoge()
-MainApp.foo()
+let h = new Wings.MainApp.Hoge()
+Wings.MainApp.foo()
