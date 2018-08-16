@@ -1,14 +1,10 @@
-class MyClass {
-  hoge() {}
-  foo() {}
+interface Car2 {
+  (type: string): string
 }
 
-// オブジェクト型リテラルがなければ、すべてを使える
-const y = new MyClass()
-y.hoge()
-y.foo()
+const c2: Car2 = function(type: string): string {
+  return `車種は、${type}`
+}
 
-// オブジェクト型リテラルがあれば、不要な機能にアクセスできないようにできる
-const x: { hoge() } = new MyClass()
-x.hoge()
-x.foo()
+
+console.log(c2('軽自動車'))
