@@ -1,15 +1,14 @@
-// Car型を定義
-interface Car {
-  type: string // プロパティのシグネチャ
-  run(): void // メソッドのシグネチャ
+class MyClass {
+  hoge() {}
+  foo() {}
 }
 
-// Car型の変数を宣言 (型注釈としてinterfaceを使う)
-const c: Car = {
-  type: 'トラック',
-  run() {
-    console.log(`${this.type}が走ります。`)
-  }
-}
+// オブジェクト型リテラルがなければ、すべてを使える
+const y = new MyClass()
+y.hoge()
+y.foo()
 
-c.run()
+// オブジェクト型リテラルがあれば、不要な機能にアクセスできないようにできる
+const x: { hoge() } = new MyClass()
+x.hoge()
+x.foo()

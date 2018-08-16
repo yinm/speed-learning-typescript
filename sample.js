@@ -1,8 +1,13 @@
-// Car型の変数を宣言 (型注釈としてinterfaceを使う)
-var c = {
-    type: 'トラック',
-    run: function () {
-        console.log(this.type + "\u304C\u8D70\u308A\u307E\u3059\u3002");
+var MyClass = /** @class */ (function () {
+    function MyClass() {
     }
-};
-c.run();
+    MyClass.prototype.hoge = function () { };
+    MyClass.prototype.foo = function () { };
+    return MyClass;
+}());
+var y = new MyClass();
+y.hoge();
+y.foo();
+var x = new MyClass();
+x.hoge();
+x.foo();
