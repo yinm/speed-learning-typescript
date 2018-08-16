@@ -1,4 +1,11 @@
-function showTime(time: Date = new Date()): string {
-  return `現在時刻: ${time.toLocaleString()}`
+function sum(...values: number[]) {
+  let result = 0
+
+  for (let value of values) {
+    result += value
+  }
+
+  return result
 }
-console.log(showTime())
+
+console.log(sum(1, 5, -8, 10))
