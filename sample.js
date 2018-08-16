@@ -1,6 +1,5 @@
-var data = [
-    'hoge',
-    108,
-    'foo',
-];
-console.log(data);
+function getScene(s) {
+    console.log(s);
+}
+getScene('spring');
+getScene('fall');

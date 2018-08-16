@@ -1,7 +1,8 @@
-let data: (string|number)[] = [
-  'hoge',
-  108,
-  'foo',
-]
+type Season = 'spring' | 'summer' | 'autumn' | 'winter'
 
-console.log(data)
+function getScene(s: Season) {
+  console.log(s)
+}
+
+getScene('spring')
+getScene('fall')
