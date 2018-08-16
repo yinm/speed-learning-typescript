@@ -1,9 +1,5 @@
-function show(result: string) {
-  return `結果は${result}です。`
+function toInt(value: number) {
+  return value.toFixed(0)
 }
 
-// console.log(show(100))
-console.log(show('100'))
-console.log(show(<any>100))
-console.log(show(100 as any))
-
+console.log(toInt(<any>'hoge'))
