@@ -1,9 +1,9 @@
-interface StringMap {
-  [index: string]: string
+enum Sex {
+  MALE,
+  FEMALE,
+  UNKNOWN,
 }
 
-let obj: StringMap = {
-  'hoge': 'ほげ',
-  'foo': 'ふぅ',
-  'bar': 'ばぁ',
-}
+let m: Sex = Sex.MALE
+console.log(m)
+console.log(Sex[m])
