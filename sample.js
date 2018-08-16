@@ -1,4 +1,2 @@
-function toInt(value) {
-    return value.toFixed(0);
-}
-console.log(toInt('hoge'));
+var DATA = 100;
+DATA = 80;
