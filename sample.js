@@ -1,8 +1,7 @@
-var data = [
-    'Java',
-    'Python',
-    'PHP',
-    'Ruby',
-    'C#',
-];
-console.log(data[0]);
+var obj = {
+    'hoge': 'ほげ',
+    'foo': 'ふぅ',
+    'bar': 'ばぁ'
+};
+console.log(obj.hoge);
+console.log(obj['hoge']);
