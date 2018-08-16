@@ -1,10 +1,23 @@
-interface Car2 {
-  (type: string): string
+class MyClass {
+  constructor(
+    private _value: number
+  ) {
+  }
+
+  get value(): number {
+    return this._value
+  }
+
+  add(value: number): this {
+    this._value += value
+    return this
+  }
+
+  minus(value: number): this {
+    this._value -= value
+    return this
+  }
 }
 
-const c2: Car2 = function(type: string): string {
-  return `車種は、${type}`
-}
-
-
-console.log(c2('軽自動車'))
+const clazz = new MyClass(10)
+console.log(clazz.add(10).minus(5).value)
