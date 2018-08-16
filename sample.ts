@@ -1,4 +1,9 @@
-let triangle = (base: number, height: number): number => {
-  return base * height / 2
+function showTime(time?: Date): string {
+  if (time === undefined) {
+    return `現在時刻: ${(new Date()).toLocaleString()}`
+  } else {
+    return `現在時刻: ${time.toLocaleString()}`
+  }
 }
-console.log(triangle(10, 5))
+
+console.log(showTime())
