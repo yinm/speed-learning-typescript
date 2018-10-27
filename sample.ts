@@ -1,10 +1,14 @@
-function sum(...values: number[]) {
-  let result = 0
-  for (let value of values) {
-    result += value
-  }
+function show(value: number): void
+function show(value: boolean): void
 
-  return result
+function show(value: any): void {
+  if (typeof value === 'number') {
+    console.log(value.toFixed(0))
+  } else {
+    console.log(value ? 'true' : 'false')
+  }
 }
 
-console.log(sum(1, 5, -8, 10))
+show(10.38)
+show(false)
+show('bar')

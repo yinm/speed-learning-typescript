@@ -1,13 +1,11 @@
-function sum() {
-    var values = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        values[_i] = arguments[_i];
+function show(value) {
+    if (typeof value === 'number') {
+        console.log(value.toFixed(0));
     }
-    var result = 0;
-    for (var _a = 0, values_1 = values; _a < values_1.length; _a++) {
-        var value = values_1[_a];
-        result += value;
+    else {
+        console.log(value ? 'true' : 'false');
     }
-    return result;
 }
-console.log(sum(1, 5, -8, 10));
+show(10.38);
+show(false);
+show('bar');
