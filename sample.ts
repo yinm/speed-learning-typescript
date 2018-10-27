@@ -1,2 +1,9 @@
-const triangle = (base: number, height: number): number => base * height / 2
-console.log(triangle(10, 5))
+let Counter = function() {
+  this.count = 0
+  setInterval(() => {
+    this.count++
+    console.log(this.count)
+  },1000)
+}
+
+Counter()
