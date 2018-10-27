@@ -1,10 +1,10 @@
-function square(value: number): number | boolean {
-  if (value < 0) {
-    return false
+function show(value: number | boolean): void {
+  if (typeof value === 'number') {
+    console.log(value.toFixed(0))
   } else {
-    return Math.sqrt(value)
+    console.log(value ? 'true' : 'false')
   }
 }
 
-console.log(square(9))
-console.log(square(-9))
+show(10.33)
+show(false)
