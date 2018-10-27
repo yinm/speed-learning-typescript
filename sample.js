@@ -1,9 +1,9 @@
-var Counter = function () {
-    var _this = this;
-    this.count = 0;
-    setInterval(function () {
-        _this.count++;
-        console.log(_this.count);
-    }, 1000);
-};
-Counter();
+function showTime(time) {
+    if (time === undefined) {
+        return "\u73FE\u5728\u6642\u523B: " + (new Date()).toLocaleString();
+    }
+    else {
+        return "\u73FE\u5728\u6642\u523B: " + time.toLocaleString();
+    }
+}
+console.log(showTime());
