@@ -1,15 +1,5 @@
-class MyGenerics<T> {
-  // T型のプロパティ
-  value: T
-
-  // T型の値を返すメソッド
-  getValue(): T {
-    return this.value
-  }
+function triangle(base: number, height: number): number {
+  return base * height / 2
 }
 
-// MyGenericsクラスにstring型を割り当て
-const g = new MyGenerics<string>()
-
-g.value = 'hoge'
-console.log(g.getValue())
+console.log(triangle(10, 5))
