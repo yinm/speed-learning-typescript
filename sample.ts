@@ -1,10 +1,10 @@
-function show(value: number | boolean): void {
-  if (typeof value === 'number') {
-    console.log(value.toFixed(0))
+function process(value: string | number) {
+  if (typeof value === 'string') {
+    return value.toUpperCase()
   } else {
-    console.log(value ? 'true' : 'false')
+    return value.toFixed(1)
   }
 }
 
-show(10.33)
-show(false)
+console.log(process('aaaaa'))
+console.log(process(12345.6789))
