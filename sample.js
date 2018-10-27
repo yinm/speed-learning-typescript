@@ -1,11 +1,10 @@
-function show(value) {
-    if (typeof value === 'number') {
-        console.log(value.toFixed(0));
+function square(value) {
+    if (value < 0) {
+        return false;
     }
     else {
-        console.log(value ? 'true' : 'false');
+        return Math.sqrt(value);
     }
 }
-show(10.38);
-show(false);
-show('bar');
+console.log(square(9));
+console.log(square(-9));
