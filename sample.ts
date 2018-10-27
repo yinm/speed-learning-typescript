@@ -1,4 +1,4 @@
-function triangle(base: number, height: number): number {
+const triangle = function(base: number, height: number): number {
   return base * height / 2
 }
 
